@@ -1,64 +1,110 @@
-<html>
-	<head>
-		<title>
-			Zomb Rags
-		</title>
-	</head>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ZOMB RAGS | Thrive. Not Survive.</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #000;
+      color: #F2F2F2;
+      font-family: 'Helvetica Neue', sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+    }
+    header {
+      width: 100%;
+      padding: 20px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #000;
+    }
+    .logo {
+      height: 40px;
+    }
+    nav a {
+      margin-left: 30px;
+      color: #A347FF;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .hero {
+      max-width: 900px;
+      padding: 100px 20px;
+      text-align: center;
+    }
+    .hero h1 {
+      font-size: 64px;
+      margin-bottom: 20px;
+      line-height: 1.2;
+    }
+    .hero p {
+      color: #66FF66;
+      font-size: 20px;
+      margin-bottom: 40px;
+    }
+    .shop-btn {
+      border: 2px solid #66FF66;
+      color: #66FF66;
+      padding: 12px 30px;
+      font-size: 16px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background 0.3s;
+    }
+    .shop-btn:hover {
+      background-color: #66FF66;
+      color: #000;
+    }
+    .tagline-section {
+      padding: 60px 20px;
+      text-align: center;
+      max-width: 700px;
+    }
+    .tagline-section h2 {
+      color: #A347FF;
+      font-size: 32px;
+      margin-bottom: 10px;
+    }
+    .tagline-section p {
+      color: #888;
+      font-size: 18px;
+    }
+    footer {
+      padding: 40px;
+      color: #404040;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="Outside label Black.png" alt="ZOMB RAGS Logo" class="logo">
+    <nav>
+      <a href="#shop">SHOP</a>
+      <a href="#about">ABOUT</a>
+      <a href="#support">SUPPORT</a>
+    </nav>
+  </header>
 
-	<body>
-		<!--- This table is for formating page --->
-		<table border="1" width=100% height=100%>
-			<!--- This is the Banner --->
-			<tr>
-				<td height=20% align=center>
-					Place banner here
-				</td>
-			</tr>
-			<!--- This is the Links --->
-			<tr>
-				<td height=5%>
-					<table border=“1” width=100% height=100%>
-						<tr>
-							<td align=center>
-								Home
-							</td>
-							<td align=center>
-								Products
-							</td>
-							<td align=center>
-								Orders
-							</td>
-							<td align=center>
-								About Us
-							</td>
-						</tr>
-					</table>
-				</td>
-			</tr>
-			<!--- This is the Body --->
-			<tr>
-				<td height=72.5%>
-					<table border=“1” width=100% height=100%>
-						<tr>
-							<td align=center width=15%>
-								Left
-							</td>
-							<td align=center width=70%>
-								Middle
-							</td>
-							<td align=center width=15%>
-								Right
-							</td>
-						</tr>
-					</table>
-				</td>
-			</tr>
-			<!--- This is the Footer --->
-			<tr>
-				<td height=2.5% align=center>
-					Copyright © 2025 Zomb Rags. All Rights Reserved. All designs, artwork, and content are the original property of Zomb Rags. Unauthorized use is prohibited.
-				</td>
-			</tr>
-		</table>
-	</body>
+  <div class="hero">
+    <h1>Thrive.<br>Not survive.</h1>
+    <p>Modular survival gear reclaimed by the Horde.</p>
+    <a href="#shop" class="shop-btn">SHOP NOW</a>
+  </div>
+
+  <div class="tagline-section">
+    <h2>VERTEBRAE</h2>
+    <p>What was broken is now your backbone.</p>
+  </div>
+
+  <footer>
+    &copy; 2025 ZOMB RAGS. All rights reserved.
+  </footer>
+</body>
 </html>
