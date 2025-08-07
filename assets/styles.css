@@ -1,4 +1,7 @@
-/* Base Setup */
+/* ---------------------- */
+/*  BASE + TYPOGRAPHY     */
+/* ---------------------- */
+
 * {
   margin: 0;
   padding: 0;
@@ -15,7 +18,10 @@ h1, h2, h3 {
   letter-spacing: 1px;
 }
 
-/* Floating Header */
+/* ---------------------- */
+/*  HEADER                */
+/* ---------------------- */
+
 header {
   position: fixed;
   top: 0;
@@ -26,6 +32,7 @@ header {
   z-index: 1000;
   display: flex;
   justify-content: space-between;
+  align-items: center;
   padding: 1rem 2rem;
 }
 .logo {
@@ -43,10 +50,17 @@ nav a:hover {
   color: #0f0;
 }
 
-/* Hero Section */
+/* ---------------------- */
+/*  HERO SECTION          */
+/* ---------------------- */
+
 .hero {
   height: 100vh;
   position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 }
 .hero video {
   width: 100%;
@@ -56,11 +70,7 @@ nav a:hover {
   z-index: -1;
 }
 .hero-text {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
+  z-index: 1;
 }
 .hero-text h1 {
   font-size: 3rem;
@@ -70,9 +80,16 @@ nav a:hover {
 .hero-text p {
   margin-top: 1rem;
   color: #ccc;
+  font-size: 1.1rem;
 }
 
-/* Glitch Text */
+/* ---------------------- */
+/*  GLITCH EFFECT         */
+/* ---------------------- */
+
+.glitch {
+  position: relative;
+}
 .glitch::before,
 .glitch::after {
   content: attr(data-text);
@@ -82,15 +99,32 @@ nav a:hover {
   overflow: hidden;
 }
 .glitch::before {
-  animation: glitchTop 1s infinite linear;
+  animation: glitchTop 1.5s infinite linear;
   color: #f0f;
 }
 .glitch::after {
-  animation: glitchBottom 1s infinite linear;
+  animation: glitchBottom 1.5s infinite linear;
   color: #0ff;
 }
+@keyframes glitchTop {
+  0%   { clip: rect(0, 9999px, 0, 0); }
+  10%  { clip: rect(10px, 9999px, 50px, 0); }
+  20%  { clip: rect(0, 9999px, 40px, 0); }
+  30%  { clip: rect(20px, 9999px, 30px, 0); }
+  100% { clip: rect(0, 9999px, 0, 0); }
+}
+@keyframes glitchBottom {
+  0%   { clip: rect(0, 9999px, 0, 0); }
+  10%  { clip: rect(60px, 9999px, 100px, 0); }
+  20%  { clip: rect(40px, 9999px, 80px, 0); }
+  30%  { clip: rect(50px, 9999px, 90px, 0); }
+  100% { clip: rect(0, 9999px, 0, 0); }
+}
 
-/* Content Area */
+/* ---------------------- */
+/*  MAIN CONTENT          */
+/* ---------------------- */
+
 .content {
   padding: 4rem 2rem;
   margin-top: 6rem;
@@ -99,24 +133,27 @@ nav a:hover {
   display: grid;
   gap: 2rem;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  margin-top: 3rem;
 }
 .card {
   background: #151515;
   border: 1px solid #2a2a2a;
   padding: 2rem;
-  transition: transform 0.3s, box-shadow 0.3s;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
   position: relative;
+  overflow: hidden;
 }
 .card:hover {
   transform: translateY(-6px);
-  box-shadow: 0 0 20px rgba(0, 255, 150, 0.4);
+  box-shadow: 0 0 20px rgba(0, 255, 150, 0.3);
 }
 .card h2 {
   color: #9efeff;
+  margin-bottom: 1rem;
 }
 .card p {
   color: #bbb;
-  margin: 1rem 0;
+  margin-bottom: 1rem;
 }
 .card a {
   text-decoration: none;
@@ -124,7 +161,10 @@ nav a:hover {
   border-bottom: 1px dashed #0f0;
 }
 
-/* Newsletter */
+/* ---------------------- */
+/*  NEWSLETTER            */
+/* ---------------------- */
+
 .newsletter {
   background: #111;
   padding: 3rem;
@@ -136,6 +176,13 @@ nav a:hover {
   font-size: 2rem;
   color: #0f0;
 }
+.newsletter p {
+  color: #aaa;
+  margin-top: 0.5rem;
+}
+.newsletter form {
+  margin-top: 1rem;
+}
 .newsletter input {
   padding: 0.7rem;
   width: 240px;
@@ -143,47 +190,67 @@ nav a:hover {
   background: #000;
   color: #0f0;
   border: 1px solid #0f0;
+  border-radius: 4px;
 }
 .newsletter button {
   padding: 0.7rem 1.5rem;
   background: #0f0;
   color: #000;
   margin-left: 1rem;
+  border: none;
   cursor: pointer;
+  border-radius: 4px;
 }
 
-/* Footer */
+/* ---------------------- */
+/*  FOOTER                */
+/* ---------------------- */
+
 footer {
   text-align: center;
   padding: 2rem 0;
   border-top: 1px solid #222;
   font-size: 0.9rem;
+  color: #666;
+}
+.socials {
+  margin-top: 1rem;
 }
 .socials a {
   margin: 0 1rem;
   color: #aaa;
   text-decoration: none;
+  transition: 0.3s;
 }
 .socials a:hover {
   color: #0f0;
 }
 
-/* Disable glitch effect on small screens */
-@media (max-width: 600px) {
+/* ---------------------- */
+/*  MOBILE FIX FOR GLITCH */
+/* ---------------------- */
+
+@media (max-width: 768px) {
   .glitch::before,
   .glitch::after {
-    display: none;
+    display: none !important;
   }
 
   .glitch {
     position: relative;
-    color: #00ff99;
-    text-shadow: 0 0 10px #00ff99;
+    color: #00ffcc;
+    text-shadow: 0 0 12px #00ffcc, 0 0 24px #00ffcc;
+    font-size: 2.2rem;
+    line-height: 1.2;
+    padding: 0 1rem;
+  }
+
+  .hero-text {
+    padding: 0 1rem;
   }
 
   .hero-text h1 {
-    font-size: 2rem;
-    padding: 0 1rem;
+    font-size: 2.2rem;
+    text-align: center;
   }
 }
-
