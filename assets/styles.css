@@ -1,0 +1,169 @@
+/* Base Setup */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Space Grotesk', sans-serif;
+  background: #0c0c0c;
+  color: #eee;
+  overflow-x: hidden;
+}
+h1, h2, h3 {
+  font-family: 'Orbitron', sans-serif;
+  letter-spacing: 1px;
+}
+
+/* Floating Header */
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  backdrop-filter: blur(12px);
+  background: rgba(0, 0, 0, 0.6);
+  border-bottom: 1px solid #111;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+}
+.logo {
+  font-size: 1.6rem;
+  color: #0f0;
+  text-shadow: 0 0 10px #0f0;
+}
+nav a {
+  color: #aaa;
+  margin-left: 2rem;
+  text-decoration: none;
+  transition: 0.3s;
+}
+nav a:hover {
+  color: #0f0;
+}
+
+/* Hero Section */
+.hero {
+  height: 100vh;
+  position: relative;
+}
+.hero video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  z-index: -1;
+}
+.hero-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+.hero-text h1 {
+  font-size: 3rem;
+  color: #00ff99;
+  text-shadow: 0 0 20px #00ff99;
+}
+.hero-text p {
+  margin-top: 1rem;
+  color: #ccc;
+}
+
+/* Glitch Text */
+.glitch::before,
+.glitch::after {
+  content: attr(data-text);
+  position: absolute;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+}
+.glitch::before {
+  animation: glitchTop 1s infinite linear;
+  color: #f0f;
+}
+.glitch::after {
+  animation: glitchBottom 1s infinite linear;
+  color: #0ff;
+}
+
+/* Content Area */
+.content {
+  padding: 4rem 2rem;
+  margin-top: 6rem;
+}
+.blog-grid {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+.card {
+  background: #151515;
+  border: 1px solid #2a2a2a;
+  padding: 2rem;
+  transition: transform 0.3s, box-shadow 0.3s;
+  position: relative;
+}
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 0 20px rgba(0, 255, 150, 0.4);
+}
+.card h2 {
+  color: #9efeff;
+}
+.card p {
+  color: #bbb;
+  margin: 1rem 0;
+}
+.card a {
+  text-decoration: none;
+  color: #0f0;
+  border-bottom: 1px dashed #0f0;
+}
+
+/* Newsletter */
+.newsletter {
+  background: #111;
+  padding: 3rem;
+  text-align: center;
+  margin-top: 4rem;
+  border-top: 1px solid #333;
+}
+.newsletter h3 {
+  font-size: 2rem;
+  color: #0f0;
+}
+.newsletter input {
+  padding: 0.7rem;
+  width: 240px;
+  margin-top: 1rem;
+  background: #000;
+  color: #0f0;
+  border: 1px solid #0f0;
+}
+.newsletter button {
+  padding: 0.7rem 1.5rem;
+  background: #0f0;
+  color: #000;
+  margin-left: 1rem;
+  cursor: pointer;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 2rem 0;
+  border-top: 1px solid #222;
+  font-size: 0.9rem;
+}
+.socials a {
+  margin: 0 1rem;
+  color: #aaa;
+  text-decoration: none;
+}
+.socials a:hover {
+  color: #0f0;
+}
