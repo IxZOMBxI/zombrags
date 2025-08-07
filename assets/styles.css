@@ -167,3 +167,23 @@ footer {
 .socials a:hover {
   color: #0f0;
 }
+
+/* Disable glitch effect on small screens */
+@media (max-width: 600px) {
+  .glitch::before,
+  .glitch::after {
+    display: none;
+  }
+
+  .glitch {
+    position: relative;
+    color: #00ff99;
+    text-shadow: 0 0 10px #00ff99;
+  }
+
+  .hero-text h1 {
+    font-size: 2rem;
+    padding: 0 1rem;
+  }
+}
+
