@@ -1,110 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ZOMB RAGS | Thrive. Not Survive.</title>
-  <style>
-    body {
-      margin: 0;
-      padding: 0;
-      background-color: #000;
-      color: #F2F2F2;
-      font-family: 'Helvetica Neue', sans-serif;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: flex-start;
-    }
-    header {
-      width: 100%;
-      padding: 20px 40px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      background-color: #000;
-    }
-    .logo {
-      height: 40px;
-    }
-    nav a {
-      margin-left: 30px;
-      color: #A347FF;
-      text-decoration: none;
-      font-weight: bold;
-    }
-    .hero {
-      max-width: 900px;
-      padding: 100px 20px;
-      text-align: center;
-    }
-    .hero h1 {
-      font-size: 64px;
-      margin-bottom: 20px;
-      line-height: 1.2;
-    }
-    .hero p {
-      color: #66FF66;
-      font-size: 20px;
-      margin-bottom: 40px;
-    }
-    .shop-btn {
-      border: 2px solid #66FF66;
-      color: #66FF66;
-      padding: 12px 30px;
-      font-size: 16px;
-      text-decoration: none;
-      font-weight: bold;
-      transition: background 0.3s;
-    }
-    .shop-btn:hover {
-      background-color: #66FF66;
-      color: #000;
-    }
-    .tagline-section {
-      padding: 60px 20px;
-      text-align: center;
-      max-width: 700px;
-    }
-    .tagline-section h2 {
-      color: #A347FF;
-      font-size: 32px;
-      margin-bottom: 10px;
-    }
-    .tagline-section p {
-      color: #888;
-      font-size: 18px;
-    }
-    footer {
-      padding: 40px;
-      color: #404040;
-      font-size: 14px;
-    }
-  </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>ZOMB RAGS // Digital Cult Blog</title>
+  <link rel="stylesheet" href="assets/styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Space+Grotesk&display=swap" rel="stylesheet" />
 </head>
 <body>
+
   <header>
-    <img src="Outside label White.png" alt="ZOMB RAGS Logo" class="logo">
+    <div class="logo">ZOMB RAGS</div>
     <nav>
-      <a href="#shop">SHOP</a>
-      <a href="#about">ABOUT</a>
-      <a href="#support">SUPPORT</a>
+      <a href="#">Blog</a>
+      <a href="#">Store</a>
+      <a href="#">About</a>
     </nav>
   </header>
 
-  <div class="hero">
-    <h1>Thrive.<br>Not survive.</h1>
-    <p>Modular survival gear reclaimed by the Horde.</p>
-    <a href="#shop" class="shop-btn">SHOP NOW</a>
-  </div>
+  <section class="hero">
+    <video autoplay muted loop playsinline>
+      <source src="assets/video-bg.mp4" type="video/mp4" />
+    </video>
+    <div class="hero-text">
+      <h1 class="glitch" data-text="WELCOME TO THE HORDE">WELCOME TO THE HORDE</h1>
+      <p>Raw thoughts. Glitched visions. Digital survival.</p>
+    </div>
+  </section>
 
-  <div class="tagline-section">
-    <h2>VERTEBRAE</h2>
-    <p>What was broken is now your backbone.</p>
-  </div>
+  <main class="content">
+    <section class="blog-grid">
+      <article class="card">
+        <h2>🔥 First Drop Launch</h2>
+        <p>A look inside our first Zomb Rags release and how it embodies survivalwear for the digital dead.</p>
+        <a href="#">Read More</a>
+      </article>
+      <article class="card">
+        <h2>🧠 Zomb State of Mind</h2>
+        <p>When the world glitches, adapt or decay. Here’s what keeps us going.</p>
+        <a href="#">Read More</a>
+      </article>
+      <article class="card">
+        <h2>💀 Death ≠ End</h2>
+        <p>Exploring the mythos behind Zomb Rags and the culture of resurrection.</p>
+        <a href="#">Read More</a>
+      </article>
+    </section>
+
+    <section class="newsletter">
+      <h3>JOIN THE CULT</h3>
+      <p>Get updates on drops, lore, and survival tips.</p>
+      <form action="#" method="post">
+        <input type="email" placeholder="Enter your email" required>
+        <button type="submit">Join</button>
+      </form>
+    </section>
+  </main>
 
   <footer>
-    &copy; 2025 ZOMB RAGS. All rights reserved.
+    <p>© 2025 ZOMB RAGS — You are seen. You survived.</p>
+    <div class="socials">
+      <a href="#">Instagram</a>
+      <a href="#">TikTok</a>
+      <a href="#">GitHub</a>
+    </div>
   </footer>
+
+  <script src="assets/script.js"></script>
 </body>
 </html>
