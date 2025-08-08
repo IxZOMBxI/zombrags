@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>ZOMB RAGS — Post</title>
+  <link rel="stylesheet" href="assets/styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Space+Grotesk&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <header>
+    <div class="logo"><a href="index.html" style="text-decoration:none;color:inherit;">ZOMB RAGS</a></div>
+    <nav>
+      <a href="index.html">Blog</a>
+      <a href="#">Store</a>
+      <a href="#">About</a>
+    </nav>
+  </header>
+
+  <main class="content post-wrap">
+    <a class="back-link" href="index.html">← Back to all posts</a>
+
+    <article class="post">
+      <div class="post-cover" id="post-cover" aria-hidden="true"></div>
+
+      <header class="post-header">
+        <h1 id="post-title">Loading…</h1>
+        <div class="post-meta">
+          <time id="post-date"></time>
+        </div>
+      </header>
+
+      <section class="post-content" id="post-content">
+        <!-- Loaded from /posts/{slug}.html -->
+      </section>
+    </article>
+  </main>
+
+  <footer>
+    <p>© 2025 ZOMB RAGS — You are seen. You survived.</p>
+    <div class="socials">
+      <a href="#">Instagram</a>
+      <a href="#">TikTok</a>
+      <a href="#">GitHub</a>
+    </div>
+  </footer>
+
+  <script src="assets/fallback-posts.js"></script>
+  <script src="assets/post.js"></script>
+
+</body>
+</html>
