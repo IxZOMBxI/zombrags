@@ -163,6 +163,24 @@ nav a:hover {
   color: #0f0;
   border-bottom: 1px dashed #0f0;
 }
+/* make the whole card-link a block and remove the underline */
+.card-link {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  border: 0; /* kill the dashed line on the whole card */
+}
+
+/* if you want an underline only on text links inside posts, target those separately */
+
+/* kill the baseline gap and control the crop */
+.card-cover {
+  display: block;        /* removes the tiny gap under images */
+  width: 100%;
+  height: auto;         /* keep your square look */
+  object-fit: contain;     /* crop nicely if the image isn’t square */
+}
+
 
 /* ---------------------- */
 /*  NEWSLETTER            */
@@ -337,5 +355,75 @@ footer {
 @media (max-width: 768px) {
   .post-header h1 { font-size: 1.6rem; }
   .post-cover { height: 28vh; }
+}
+
+/* ---- Store grid ---- */
+.store-grid {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  margin-top: 3rem;
+}
+
+.product-card {
+  background: #151515;
+  border: 1px solid #2a2a2a;
+  border-radius: 6px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 0 12px rgba(0, 255, 150, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 0 20px rgba(0, 255, 150, 0.3);
+}
+
+.product-image {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+}
+
+.product-body {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.product-body h2 {
+  color: #9efeff;
+  margin-bottom: 0.5rem;
+}
+
+.product-price {
+  color: #0f0;
+  font-size: 1.4rem;
+  margin-bottom: 0.8rem;
+}
+
+.product-desc {
+  color: #bbb;
+  font-size: 0.95rem;
+  flex-grow: 1;
+  margin-bottom: 1rem;
+}
+
+.buy-button {
+  background: #0f0;
+  color: #000;
+  border: none;
+  padding: 0.8rem 1.2rem;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: 0.3s;
+}
+
+.buy-button:hover {
+  background: #9efeff;
 }
 
