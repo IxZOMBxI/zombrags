@@ -40,7 +40,7 @@ And remember — *we see you.*
 **Follow Zomb Rags:**
 - 🛒 [Store](https://www.zombrags.com/store)  
 - 📷 [Instagram](https://www.instagram.com/zombrags)  
-- 🎥 [YouTube](https://youtube.com/ZombRags)   
+- 🎥 [YouTube](https://youtube.com/@ZombRags)   
 
 ---
 
