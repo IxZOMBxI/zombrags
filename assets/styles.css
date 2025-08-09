@@ -427,3 +427,124 @@ footer {
   background: #9efeff;
 }
 
+/* ================================
+   ABOUT PAGE  
+   ================================ */
+
+/* page container spacing similar to .post-wrap */
+.about-wrap {
+  max-width: 980px;
+  margin: 7rem auto 4rem; /* matches your post spacing */
+  padding: 0 1.25rem;
+}
+
+/* subtle header kicker above H1 */
+.kicker {
+  display: inline-block;
+  font-size: 0.85rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #9efeff;
+  margin-bottom: 0.25rem;
+  opacity: 0.9;
+}
+
+/* lead paragraph just under the title */
+.lead {
+  font-size: 1.15rem;
+  color: #dcdcdc;
+}
+
+/* grid for bio + sidebar card */
+.about-grid {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: 2.1fr 1fr;
+  margin-top: 1rem;
+}
+@media (max-width: 900px) {
+  .about-grid { grid-template-columns: 1fr; }
+}
+
+/* portrait / logo block */
+.portrait {
+  width: 180px;
+  height: 180px;
+  border-radius: 16px;
+  border: 1px solid #2a2a2a;
+  background: radial-gradient(60% 60% at 50% 50%, #0d0d0d 0%, #080808 100%);
+  box-shadow: 0 0 24px rgba(0,255,150,0.08), inset 0 0 24px rgba(0,255,150,0.06);
+  overflow: hidden;
+}
+.portrait img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* side info card */
+.about-card {
+  background: #141414;
+  border: 1px solid #2a2a2a;
+  border-radius: 10px;
+  padding: 1.25rem;
+  box-shadow: 0 0 18px rgba(0,255,150,0.08);
+}
+.about-card h3 {
+  color: #9efeff;
+  margin-bottom: 0.25rem;
+}
+.about-card p { color: #bbb; }
+
+/* values / features list */
+.values {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.75rem;
+  margin: 1rem 0 0.25rem;
+  padding: 0;
+}
+.values li {
+  background: #0f0f0f;
+  border: 1px solid #242424;
+  border-radius: 8px;
+  padding: 0.75rem 0.9rem;
+  color: #d2d2d2;
+}
+@media (max-width: 640px) {
+  .values { grid-template-columns: 1fr; }
+}
+
+/* pull quote that fits your brand */
+.pull-quote {
+  margin: 1.25rem 0;
+  padding: 0.9rem 1rem;
+  border-left: 3px solid #0f0;
+  background: #0e0e0e;
+  color: #cfcfcf;
+  font-style: normal;
+}
+
+/* signature line at the end */
+.signature {
+  margin-top: 1.25rem;
+  color: #9efeff;
+  font-family: 'Orbitron', sans-serif;
+  letter-spacing: 0.04em;
+}
+
+/* links inside about copy */
+.about a {
+  color: #0f0;
+  text-decoration: none;
+  border-bottom: 1px dashed #0f0;
+}
+
+/* accessibility: reduce glitch animation noise on request */
+@media (prefers-reduced-motion: reduce) {
+  .glitch::before, .glitch::after { animation: none !important; }
+}
+
+
