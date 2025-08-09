@@ -1,23 +1,9 @@
 [
   {
-    "slug": "first-drop-launch",
-    "title": "🔥 First Drop Launch",
-    "excerpt": "Behind the scenes of Zomb Rags' first drop.",
-    "date": "2025-08-01",
-    "cover": "assets/covers/Place-HolderSMALL.jpg"
-  },
-  {
-    "slug": "zomb-state-of-mind",
-    "title": "🧠 Zomb State of Mind",
-    "excerpt": "Why survival is sacred in glitch culture.",
-    "date": "2025-08-03",
-    "cover": "assets/covers/Zomb-Head.jpg"
-  },
-  {
-    "slug": "death-not-end",
-    "title": "💀 Death ≠ End",
-    "excerpt": "What the undead understand better than the living.",
-    "date": "2025-08-05",
+    "slug": "welcom-to-the-horde",
+    "title": "🧠 Welcome to the HORDE",
+    "excerpt": "Survival isn’t just a theme — it’s the code we live by.",
+    "date": "2025-08-08",
     "cover": "assets/covers/Zomb-Head.jpg"
   }
 ]
