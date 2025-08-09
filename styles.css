@@ -1,0 +1,550 @@
+/* ---------------------- */
+/*  BASE + TYPOGRAPHY     */
+/* ---------------------- */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Space Grotesk', sans-serif;
+  background: #0c0c0c;
+  color: #eee;
+  overflow-x: hidden;
+}
+h1, h2, h3 {
+  font-family: 'Orbitron', sans-serif;
+  letter-spacing: 1px;
+}
+
+/* ---------------------- */
+/*  HEADER                */
+/* ---------------------- */
+
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  backdrop-filter: blur(12px);
+  background: rgba(0, 0, 0, 0.6);
+  border-bottom: 1px solid #111;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+}
+.logo {
+  font-size: 1.6rem;
+  color: #0f0;
+  text-shadow: 0 0 10px #0f0;
+}
+nav a {
+  color: #aaa;
+  margin-left: 2rem;
+  text-decoration: none;
+  transition: 0.3s;
+}
+nav a:hover {
+  color: #0f0;
+}
+
+/* ---------------------- */
+/*  HERO SECTION          */
+/* ---------------------- */
+
+.hero {
+  height: 100vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.hero video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  z-index: -1;
+}
+.hero-text {
+  z-index: 1;
+}
+.hero-text h1 {
+  font-size: 3rem;
+  color: #00ff99;
+  text-shadow: 0 0 20px #00ff99;
+}
+.hero-text p {
+  margin-top: 1rem;
+  color: #ccc;
+  font-size: 1.1rem;
+}
+
+/* ---------------------- */
+/*  GLITCH EFFECT         */
+/* ---------------------- */
+
+.glitch {
+  position: relative;
+}
+.glitch::before,
+.glitch::after {
+  content: attr(data-text);
+  position: absolute;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+}
+.glitch::before {
+  animation: glitchTop 1.5s infinite linear;
+  color: #f0f;
+}
+.glitch::after {
+  animation: glitchBottom 1.5s infinite linear;
+  color: #0ff;
+}
+@keyframes glitchTop {
+  0%   { clip: rect(0, 9999px, 0, 0); }
+  10%  { clip: rect(10px, 9999px, 50px, 0); }
+  20%  { clip: rect(0, 9999px, 40px, 0); }
+  30%  { clip: rect(20px, 9999px, 30px, 0); }
+  100% { clip: rect(0, 9999px, 0, 0); }
+}
+@keyframes glitchBottom {
+  0%   { clip: rect(0, 9999px, 0, 0); }
+  10%  { clip: rect(60px, 9999px, 100px, 0); }
+  20%  { clip: rect(40px, 9999px, 80px, 0); }
+  30%  { clip: rect(50px, 9999px, 90px, 0); }
+  100% { clip: rect(0, 9999px, 0, 0); }
+}
+
+/* ---------------------- */
+/*  MAIN CONTENT          */
+/* ---------------------- */
+
+.content {
+  padding: 4rem 2rem;
+  margin-top: 6rem;
+  max-width: 1280px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.blog-grid {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  margin-top: 3rem;
+}
+.card {
+  background: #151515;
+  border: 1px solid #2a2a2a;
+  padding: 2rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 0 20px rgba(0, 255, 150, 0.3);
+}
+.card h2 {
+  color: #9efeff;
+  margin-bottom: 1rem;
+}
+.card p {
+  color: #bbb;
+  margin-bottom: 1rem;
+}
+.card a {
+  text-decoration: none;
+  color: #0f0;
+  border-bottom: 1px dashed #0f0;
+}
+/* make the whole card-link a block and remove the underline */
+.card-link {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  border: 0; /* kill the dashed line on the whole card */
+}
+
+/* if you want an underline only on text links inside posts, target those separately */
+
+/* kill the baseline gap and control the crop */
+.card-cover {
+  display: block;        /* removes the tiny gap under images */
+  width: 100%;
+  height: auto;         /* keep your square look */
+  object-fit: contain;     /* crop nicely if the image isn’t square */
+}
+
+
+/* ---------------------- */
+/*  NEWSLETTER            */
+/* ---------------------- */
+
+.newsletter {
+  background: #111;
+  padding: 3rem;
+  text-align: center;
+  margin-top: 4rem;
+  border-top: 1px solid #333;
+}
+.newsletter h3 {
+  font-size: 2rem;
+  color: #0f0;
+}
+.newsletter p {
+  color: #aaa;
+  margin-top: 0.5rem;
+}
+.newsletter form {
+  margin-top: 1rem;
+}
+.newsletter input {
+  padding: 0.7rem;
+  width: 240px;
+  margin-top: 1rem;
+  background: #000;
+  color: #0f0;
+  border: 1px solid #0f0;
+  border-radius: 4px;
+}
+.newsletter button {
+  padding: 0.7rem 1.5rem;
+  background: #0f0;
+  color: #000;
+  margin-left: 1rem;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+/* ---------------------- */
+/*  FOOTER                */
+/* ---------------------- */
+
+footer {
+  text-align: center;
+  padding: 2rem 0;
+  border-top: 1px solid #222;
+  font-size: 0.9rem;
+  color: #666;
+}
+.socials {
+  margin-top: 1rem;
+}
+.socials a {
+  margin: 0 1rem;
+  color: #aaa;
+  text-decoration: none;
+  transition: 0.3s;
+}
+.socials a:hover {
+  color: #0f0;
+}
+
+/* ---------------------- */
+/*  MOBILE FIX FOR GLITCH */
+/* ---------------------- */
+
+@media (max-width: 768px) {
+  .glitch::before,
+  .glitch::after {
+    display: none !important;
+  }
+
+  .glitch {
+    position: relative;
+    color: #00ffcc;
+    text-shadow: 0 0 12px #00ffcc, 0 0 24px #00ffcc;
+    font-size: 2.2rem;
+    line-height: 1.2;
+    padding: 0 1rem;
+  }
+
+  .hero-text {
+    padding: 0 1rem;
+  }
+
+  .hero-text h1 {
+    font-size: 2.2rem;
+    text-align: center;
+  }
+}
+
+/* ---- Post page ---- */
+.post-wrap {
+  max-width: 900px;
+}
+
+.back-link {
+  display: inline-block;
+  margin-bottom: 1rem;
+  color: #9efeff;
+  text-decoration: none;
+  border-bottom: 1px dashed #9efeff;
+}
+.back-link:hover { color: #0f0; border-bottom-color: #0f0; }
+
+.post {
+  background: #121212;
+  border: 1px solid #2a2a2a;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 0 24px rgba(0,255,150,0.08);
+}
+
+.post-cover {
+  height: 36vh;
+  background: #0b0b0b;
+  background-size: cover;
+  background-position: center;
+  border-bottom: 1px solid #222;
+}
+.post-cover.has-image { box-shadow: inset 0 -80px 120px rgba(0,0,0,0.55); }
+
+.post-header {
+  padding: 1.5rem 1.5rem 0.5rem 1.5rem;
+}
+.post-header h1 {
+  font-size: 2rem;
+  color: #9efeff;
+  margin-bottom: 0.25rem;
+}
+.post-meta {
+  color: #aaa;
+  font-size: 0.9rem;
+}
+
+.post-content {
+  padding: 1rem 1.5rem 2rem 1.5rem;
+  line-height: 1.8;
+  color: #e6e6e6;
+}
+.post-content h2, .post-content h3 {
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+.post-content p { margin: 0.8rem 0; }
+.post-content img {
+  max-width: 100%;
+  height: auto;
+  border: 1px solid #2a2a2a;
+  border-radius: 6px;
+}
+.post-content a {
+  color: #0f0;
+  text-decoration: none;
+  border-bottom: 1px dashed #0f0;
+}
+.post-content ul, .post-content ol { margin-left: 1.2rem; }
+.post-content blockquote {
+  margin: 1rem 0;
+  padding: 0.8rem 1rem;
+  border-left: 3px solid #0f0;
+  background: #0f0f0f;
+  color: #cfcfcf;
+}
+
+/* Smaller hero spacing on post page (since no big video) */
+.post-wrap { margin-top: 7rem; }
+@media (max-width: 768px) {
+  .post-header h1 { font-size: 1.6rem; }
+  .post-cover { height: 28vh; }
+}
+
+/* ---- Store grid ---- */
+.store-grid {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  margin-top: 3rem;
+}
+
+.product-card {
+  background: #151515;
+  border: 1px solid #2a2a2a;
+  border-radius: 6px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 0 12px rgba(0, 255, 150, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 0 20px rgba(0, 255, 150, 0.3);
+}
+
+.product-image {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+}
+
+.product-body {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.product-body h2 {
+  color: #9efeff;
+  margin-bottom: 0.5rem;
+}
+
+.product-price {
+  color: #0f0;
+  font-size: 1.4rem;
+  margin-bottom: 0.8rem;
+}
+
+.product-desc {
+  color: #bbb;
+  font-size: 0.95rem;
+  flex-grow: 1;
+  margin-bottom: 1rem;
+}
+
+.buy-button {
+  background: #0f0;
+  color: #000;
+  border: none;
+  padding: 0.8rem 1.2rem;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: 0.3s;
+}
+
+.buy-button:hover {
+  background: #9efeff;
+}
+
+/* ================================
+   ABOUT PAGE  
+   ================================ */
+
+/* page container spacing similar to .post-wrap */
+.about-wrap {
+  max-width: 980px;
+  margin: 7rem auto 4rem; /* matches your post spacing */
+  padding: 0 1.25rem;
+}
+
+/* subtle header kicker above H1 */
+.kicker {
+  display: inline-block;
+  font-size: 0.85rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #9efeff;
+  margin-bottom: 0.25rem;
+  opacity: 0.9;
+}
+
+/* lead paragraph just under the title */
+.lead {
+  font-size: 1.15rem;
+  color: #dcdcdc;
+}
+
+/* grid for bio + sidebar card */
+.about-grid {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: 2.1fr 1fr;
+  margin-top: 1rem;
+}
+@media (max-width: 900px) {
+  .about-grid { grid-template-columns: 1fr; }
+}
+
+/* portrait / logo block */
+.portrait {
+  width: 180px;
+  height: 180px;
+  border-radius: 16px;
+  border: 1px solid #2a2a2a;
+  background: radial-gradient(60% 60% at 50% 50%, #0d0d0d 0%, #080808 100%);
+  box-shadow: 0 0 24px rgba(0,255,150,0.08), inset 0 0 24px rgba(0,255,150,0.06);
+  overflow: hidden;
+}
+.portrait img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* side info card */
+.about-card {
+  background: #141414;
+  border: 1px solid #2a2a2a;
+  border-radius: 10px;
+  padding: 1.25rem;
+  box-shadow: 0 0 18px rgba(0,255,150,0.08);
+}
+.about-card h3 {
+  color: #9efeff;
+  margin-bottom: 0.25rem;
+}
+.about-card p { color: #bbb; }
+
+/* values / features list */
+.values {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.75rem;
+  margin: 1rem 0 0.25rem;
+  padding: 0;
+}
+.values li {
+  background: #0f0f0f;
+  border: 1px solid #242424;
+  border-radius: 8px;
+  padding: 0.75rem 0.9rem;
+  color: #d2d2d2;
+}
+@media (max-width: 640px) {
+  .values { grid-template-columns: 1fr; }
+}
+
+/* pull quote that fits your brand */
+.pull-quote {
+  margin: 1.25rem 0;
+  padding: 0.9rem 1rem;
+  border-left: 3px solid #0f0;
+  background: #0e0e0e;
+  color: #cfcfcf;
+  font-style: normal;
+}
+
+/* signature line at the end */
+.signature {
+  margin-top: 1.25rem;
+  color: #9efeff;
+  font-family: 'Orbitron', sans-serif;
+  letter-spacing: 0.04em;
+}
+
+/* links inside about copy */
+.about a {
+  color: #0f0;
+  text-decoration: none;
+  border-bottom: 1px dashed #0f0;
+}
+
+/* accessibility: reduce glitch animation noise on request */
+@media (prefers-reduced-motion: reduce) {
+  .glitch::before, .glitch::after { animation: none !important; }
+}
+
+
